@@ -11,7 +11,7 @@
 
 ## Task 3:
 
-We have to enter to the ftp with the anonymous user: ftp IP and use the default user "Anonymous", Do a dir and you can see that 
+We connect to FTP using anonymous login (Anonymous:Anonymous), and list the available files:
 There is 2 files, task.txt and locks.txt. Once we done this, download the files doing: get FILE and in our machine we
 can read it and we see that in task.txt the guy that write that message wrote up his name, lin
 
@@ -37,14 +37,14 @@ hydra -l lin -P locks.txt IP -t 4 ssh we would avaible to bruteforce the passwor
 
 ## Task 6: 
 
-Once we have the password(RedDr4gonSynd1cat3) and the user(lin), we can log in with ssh and we have the users.txt flag
+Once we have the password(RedDr4gonSynd1cat3) and the user(lin), we can log in with ssh and take the users.txt flag
 
 <img src="Images/Bounty5.png" alt="FTP" width="450" lenght="180"/> 
 
 ## Task 7: 
 
 When we are here, we have to do the basic steps of privesc, on this case we just make sudo -l and see that we can execute /bin/tar as root,
-so we go to GTFO Bins search temp and we have the right command to privesc to root, in this case this is the command:
+so we go to GTFO Bins search tar and we have the right command to privesc to root, in this case this is the command:
 sudo tar -cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/sh, we do whoami, and we see we are root, and we have the root flag
 
 <img src="Images/Bounty6.png" alt="FTP" width="650" lenght="180"/> 
