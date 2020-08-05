@@ -14,7 +14,7 @@ We have to enter to the ftp with the anonymous user: ftp IP and then put Anonymo
 There is 2 files, task.txt and locks.txt, once we done this we should download the files with get (file) and in our machine we
 read it and we see that in task.txtx the guy that write that message wrote up his name, lin
 
-<img src="Images/Bug.png" alt="FTP" width="120"/> 
+<img src="Images/Bug.png" alt="FTP" width="240" lenght="120"/> 
 
 
 ## Task 4: 
